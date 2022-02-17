@@ -2,15 +2,23 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let totalBalanceInput = document.getElementById('total-income')
     let totalBalanceNumber = parseFloat(totalBalanceInput.value);
     let totalBalance = totalBalanceNumber;
-    if (totalBalance > 0) {
+    // console.log(totalBalance);
 
+    //  error case 
+    let errorCase1 = document.getElementById('error-case1')
+    let errorCase2 = document.getElementById('error-case2')
+    if (totalBalance < 0) {
+        errorCase1.style.display = 'block'
     }
+    else if (isNaN(totalBalance) == true) {
+        errorCase2.style.display = 'block'
+    }
+
 
     // expenses total
     let foodInput = document.getElementById('food-value');
     let foodNumber = parseFloat(foodInput.value)
     let foodTotal = foodNumber;
-
 
     let rentInput = document.getElementById('rent-value');
     let rentNumber = parseFloat(rentInput.value);
@@ -22,6 +30,8 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let clothsTotal = clothsNumber;
 
     let totalExpenses = foodTotal + rentTotal + clothsTotal;
+
+
     let totalExpensesMinus = totalBalance - totalExpenses;
 
     // Expenses 
@@ -38,10 +48,11 @@ document.getElementById('calculate-button').addEventListener('click', function n
 // save Button calculate
 
 document.getElementById('save').addEventListener('click', function name(params) {
-
     let saveInput = document.getElementById('save-input');
     let saveNumber = parseFloat(saveInput.value);
     let saveTotal = saveNumber;
+    console.log(saveTotal);
+
 
 
 
@@ -49,7 +60,16 @@ document.getElementById('save').addEventListener('click', function name(params) 
     let restBalanceNumber = parseFloat(restBalanceInput.innerText)
     let totalRestBalance = restBalanceNumber;
 
+
     let savingAmount = totalRestBalance * saveTotal / 100;
+    let errorCase3 = document.getElementById('error-case3')
+    let errorCase4 = document.getElementById('error-case4')
+    if (saveTotal > 100) {
+        errorCase3.style.display = 'block'
+    }
+    else if (isNaN(saveTotal) == true) {
+        errorCase4.style.display = 'block'
+    }
 
 
 

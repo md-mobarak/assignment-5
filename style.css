@@ -1,0 +1,36 @@
+#error-case1{
+    text-align: center;
+    background-color: rgb(13, 231, 159);
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 5px 8px;
+    display: none;
+    
+}
+#error-case2{
+    text-align: center;
+    background-color: rgb(226, 47, 15);
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 5px 8px;
+    display: none;
+}
+#error-case3{
+    text-align: center;
+    background-color: rgb(13, 231, 159);
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 5px 8px;
+    display: none;
+    
+}
+#error-case4{
+    text-align: center;
+    background-color: rgb(226, 47, 15);
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 5px 8px;
+    display: none;
+}
