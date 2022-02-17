@@ -3,8 +3,6 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let totalBalanceNumber = parseFloat(totalBalanceInput.value);
     let totalBalance = totalBalanceNumber;
 
-    // console.log(totalBalance);
-
     //  error case 
     let errorCase1 = document.getElementById('error-case1')
     let errorCase2 = document.getElementById('error-case2')
@@ -38,7 +36,7 @@ document.getElementById('calculate-button').addEventListener('click', function n
 
     let totalExpensesMinus = totalBalance - totalExpenses;
 
-    // Expenses 
+    //  Expenses calculate
     let expensesInput = document.getElementById('total-expenses');
     let expensesNumber = parseFloat(expensesInput.innerText);
     expensesInput.innerText = totalExpenses;
@@ -47,7 +45,7 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let restBalanceInput = document.getElementById('rest-balance');
     let restBalanceNumber = parseFloat(restBalanceInput.innerText)
     restBalanceInput.innerText = totalExpensesMinus;
-
+    // error case 
     let errorCase6 = document.getElementById('error-case6')
     if (totalExpensesMinus < totalExpenses) {
         errorCase6.style.display = 'block'
@@ -61,17 +59,13 @@ document.getElementById('save').addEventListener('click', function name(params) 
     let saveInput = document.getElementById('save-input');
     let saveNumber = parseFloat(saveInput.value);
     let saveTotal = saveNumber;
-    console.log(saveTotal);
-
-
-
 
     let restBalanceInput = document.getElementById('rest-balance')
     let restBalanceNumber = parseFloat(restBalanceInput.innerText)
     let totalRestBalance = restBalanceNumber;
 
-
     let savingAmount = totalRestBalance * saveTotal / 100;
+    //  error case 
     let errorCase3 = document.getElementById('error-case3')
     let errorCase4 = document.getElementById('error-case4')
     let errorCase5 = document.getElementById('error-case5')
@@ -85,8 +79,6 @@ document.getElementById('save').addEventListener('click', function name(params) 
     else if (isNaN(saveTotal) == true) {
         errorCase5.style.display = 'block'
     }
-
-
 
 
     let savingAmountInput = document.getElementById('saving-amount')
