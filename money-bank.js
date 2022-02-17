@@ -2,6 +2,7 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let totalBalanceInput = document.getElementById('total-income')
     let totalBalanceNumber = parseFloat(totalBalanceInput.value);
     let totalBalance = totalBalanceNumber;
+
     // console.log(totalBalance);
 
     //  error case 
@@ -64,12 +65,18 @@ document.getElementById('save').addEventListener('click', function name(params) 
     let savingAmount = totalRestBalance * saveTotal / 100;
     let errorCase3 = document.getElementById('error-case3')
     let errorCase4 = document.getElementById('error-case4')
+    let errorCase5 = document.getElementById('error-case5')
     if (saveTotal > 100) {
         errorCase3.style.display = 'block'
     }
-    else if (isNaN(saveTotal) == true) {
+    else if (saveTotal < 0) {
         errorCase4.style.display = 'block'
     }
+
+    else if (isNaN(saveTotal) == true) {
+        errorCase5.style.display = 'block'
+    }
+
 
 
 

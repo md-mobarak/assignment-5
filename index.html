@@ -22,7 +22,7 @@
     <main class="container row mx-auto">
         <section class="ms-sm-3 mt-4 col-sm-6 col-lg-7">
             <div>
-                <img class="img-fluid" width="80%" src="money-master2.jpg" alt="">
+                <img class="img-fluid rounded-3" width="80%" src="money-master2.jpg" alt="">
             </div>
         </section>
         <section class="me-5 mt-4 col-sm-6 col-lg-4 ">
@@ -38,7 +38,7 @@
                         id=""></p>
                 <p class="fw-bold">Expenses</p>
                 <p>Food:<input class="bg-secondary bg-opacity-25 rounded ms-2" type="text" name="" id="food-value"></p>
-                <p>Rent:<input class="bg-secondary bg-opacity-25 rounded ms-2" type="text" name="" id="rent-value"></p>
+                <p>Rent: <input class="bg-secondary bg-opacity-25 rounded ms-2" type="text" name="" id="rent-value"></p>
                 <p>Cloths:<input class="bg-secondary bg-opacity-25 rounded ms-2" type="text" name="" id="cloths-value">
                 </p>
 
@@ -46,18 +46,20 @@
                 <button id="calculate-button" type="button" class="btn btn-success px-5 fw-bold ms-5">Calculate</button>
                 <!-- total Expenses -->
                 <div>
-                    <p class="fw-bold ms-3">Total Expenses: <span id="total-expenses">5000</span></p>
+                    <p class="fw-bold ms-3">Total Expenses: <span id="total-expenses">0000</span></p>
                     <p id="error-case3">Insufficient balance</p>
                     <p id="error-case4">Please Type Valid Number</p>
-                    <p class="fw-bold ms-3">Balance: <span id="rest-balance">5000</span></p>
+                    <p id="error-case5">Don't Type Words</p>
+
+                    <p class="fw-bold ms-3">Balance: <span id="rest-balance">0000</span></p>
                 </div>
                 <!-- save balance -->
                 <p>save: <input type="text" id="save-input" class="bg-secondary bg-opacity-25 rounded ms-2" name="">
                     <span class="fw-bold">%</span>
                     <button type="button" class="btn btn-success px-3 fw-bold" id="save">Save</button>
                 </p>
-                <p class="fw-bold">saving amount: <span id="saving-amount">2000</span></p>
-                <p class="fw-bold">Remaining Balance: <span id="remaining-balance">3000</span></p>
+                <p class="fw-bold">saving amount: <span id="saving-amount">0000</span></p>
+                <p class="fw-bold">Remaining Balance: <span id="remaining-balance">0000</span></p>
 
             </div>
         </section>
