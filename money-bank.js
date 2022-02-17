@@ -21,14 +21,17 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let foodNumber = parseFloat(foodInput.value)
     let foodTotal = foodNumber;
 
+
     let rentInput = document.getElementById('rent-value');
     let rentNumber = parseFloat(rentInput.value);
     let rentTotal = rentNumber;
 
 
+
     let clothsInput = document.getElementById('cloths-value');
     let clothsNumber = parseFloat(clothsInput.value);
     let clothsTotal = clothsNumber;
+
 
     let totalExpenses = foodTotal + rentTotal + clothsTotal;
 
@@ -36,14 +39,20 @@ document.getElementById('calculate-button').addEventListener('click', function n
     let totalExpensesMinus = totalBalance - totalExpenses;
 
     // Expenses 
-    let expensesInput = document.getElementById('total-expenses')
-    let expensesNumber = parseFloat(expensesInput.innerText)
-    expensesInput.innerText = totalExpenses
+    let expensesInput = document.getElementById('total-expenses');
+    let expensesNumber = parseFloat(expensesInput.innerText);
+    expensesInput.innerText = totalExpenses;
 
 
-    let restBalanceInput = document.getElementById('rest-balance')
+    let restBalanceInput = document.getElementById('rest-balance');
     let restBalanceNumber = parseFloat(restBalanceInput.innerText)
-    restBalanceInput.innerText = totalExpensesMinus
+    restBalanceInput.innerText = totalExpensesMinus;
+
+    let errorCase6 = document.getElementById('error-case6')
+    if (totalExpensesMinus < totalExpenses) {
+        errorCase6.style.display = 'block'
+
+    }
 });
 
 // save Button calculate
